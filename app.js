@@ -12,7 +12,9 @@ app.set('view engine', 'ejs');
 
 
 //set up default mongoose connection
-var db1 = mongoose.connect('write mongodb url here',{useNewUrlParser: true , useUnifiedTopology: true})
+// Write your mongoDB URL here
+// like this 'mongodb+srv://Your_Username:'+encodeURIComponent("Your_Password") +'@cluster0.rseim.mongodb.net/blogDB'
+var db1 = mongoose.connect('url',{useNewUrlParser: true , useUnifiedTopology: true})
 
 //get he default connection
 var db = mongoose.connection;
