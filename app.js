@@ -12,7 +12,9 @@ app.set('view engine', 'ejs');
 
 
 //set up default mongoose connection
-var db1 = mongoose.connect('mongodb+srv://admin-arpit:'+encodeURIComponent("Arpit#123") +'@cluster0.l1d59.mongodb.net/todolistDB',{useNewUrlParser: true , useUnifiedTopology: true})
+const pass = encodeURIComponent(process.env.PASS);
+const user = process.env.USER;
+var db1 = mongoose.connect('mongodb+srv://'+user+':'+pass+'@cluster0.rseim.mongodb.net/todolistDB',{useNewUrlParser:true, useUnifiedTopology:true});
 
 //get he default connection
 var db = mongoose.connection;
